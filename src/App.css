@@ -1,0 +1,421 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: white;
+  background-color: rgba(10, 44, 34, 0.897);
+}
+.header_app {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 75%;
+}
+.header_app .header_img {
+  width: 100%;
+  height: 75%;
+  border-radius: 10px;
+
+  background-image: url(https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/QQWVSJ6MDVGKRELX455KIABEEY.gif);
+  height: 200px;
+  background-position: 45% 33%;
+}
+.header_app h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  text-align: center;
+
+  font-family: 'Pangolin', sans-serif;
+
+  background-color: rgb(36, 37, 37);
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100%;
+
+  border-radius: 10px;
+  background-color: rgb(109, 119, 119);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.location h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+/* Form Search Component */
+.formsearch {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}
+.formsearch input {
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+.formsearch button {
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+/* Error cards */
+.ErrorCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100%;
+
+  border-radius: 10px;
+  background-color: rgba(27, 36, 76, 255);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.ErrorCard h2 {
+  font-size: 1.2rem;
+  color: black;
+}
+.ErrorCard p {
+  font-size: 1.5rem;
+  color: black;
+}
+.ErrorCard .ErrorCard_Data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 90%;
+  height: 100%;
+  min-height: 200px;
+
+  border-radius: 10px;
+  background-color: rgba(170, 221, 247, 255);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.ErrorCard .ErrorCard__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Card css */
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+
+  border-radius: 10px;
+  background-image: linear-gradient(
+      rgba(47, 64, 112, 0.384),
+      rgba(44, 40, 15, 0.411)
+    ),
+    url(./assets/blob-scene-haikei2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.Card h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.Card ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.Card ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 1rem;
+}
+
+.Card ul li span {
+  font-size: 1.5rem;
+}
+/* Resident h2 */
+.residents_h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+/* Resident Card*/
+.resident-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100%;
+}
+.residents_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: transparent;
+}
+.containet_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.residents_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  width: 50%;
+  height: 50%;
+
+  background-color: transparent;
+}
+.residents_buttons button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #23c483;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.residents_buttons button::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.residents_buttons button::before {
+  content: '';
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.residents_buttons button:hover::before,
+.residents_buttons button:hover::after {
+  transform: scale(0);
+}
+
+.residents_buttons button:hover {
+  box-shadow: inset 0px 0px 25px #23c483;
+}
+
+.num_pages {
+  font-size: 2rem;
+  padding: 15px;
+}
+.ResidentCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  background-color: rgba(36, 37, 37, 0.596);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ResidentCard .img_resident {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.ResidentCard .img_resident img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ResidentCard .info_resident {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+.ResidentCard .img_resident .resident_status {
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.resident_circle {
+  display: block;
+  width: 15px;
+  height: 10px;
+  border-radius: 50%;
+
+  background-color: gray;
+}
+.Alive {
+  background-color: green;
+}
+.Dead {
+  background-color: red;
+}
+.ResidentCard .info_resident .name_resident {
+  font-size: 2rem;
+}
+
+.ResidentCard .info_resident .data_resident {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+
+  font-size: 1.5rem;
+}
+
+.ResidentCard .info_resident .data_resident span {
+  font-size: 1rem;
+  color: rgb(165, 154, 154);
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .App {
+    width: 90vw;
+    background-color: rgba(39, 33, 33, 255);
+  }
+  .header_app {
+    width: 90vw;
+  }
+  .formsearch input {
+    color: #f7f5f8;
+    border: 2px solid #23c483;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+  }
+  .formsearch .input:active {
+    box-shadow: 2px 2px 15px #1b244c inset;
+  }
+  .formsearch button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  .formsearch button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .formsearch button:active {
+    box-shadow: 0px 0px 0px 0px rgba(46, 229, 157, 0.2);
+    transform: translateY(7px);
+  }
+  /* Location*/
+  .location {
+    width: 75vw;
+
+    background-color: transparent;
+  }
+  .Card {
+    background-image: url(./assets/blob-scene-haikei.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #000;
+  }
+
+  .ErrorCard {
+    width: 50vw;
+  }
+  .Card {
+    width: 50vw;
+  }
+  .resident-container {
+    width: 75vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ResidentCard {
+    width: 48%;
+
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+}
