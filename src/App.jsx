@@ -13,7 +13,7 @@ function App() {
   const [idLocation, setIdLocation] = useState(randomId)
   const [inputError, setInputError] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [cardsPerPage] = useState(6)
+  const [cardsPerPage] = useState(4)
   const [residents, setResidents] = useState([])
 
   const totalPages = Math.ceil(residents.length / cardsPerPage)
