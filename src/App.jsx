@@ -9,7 +9,6 @@ import ErrorCard from './components/ErrorCard'
 
 function App() {
   const randomId = getRandomNumber(126)
-
   const [idLocation, setIdLocation] = useState(randomId)
   const [inputError, setInputError] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -48,11 +47,12 @@ function App() {
   return (
     <div className="App">
       <header className="header_app">
-        <div className="header_img"></div>
-        <h1>Rick and Morty API</h1>
+        <div className="header_img">
+          <img className="title_app" src="./assets/title.png" alt="RickAndMorty" />
+        </div>
       </header>
       <main>
-        <div>
+        <div className='container_form'>
           <FormSearch
             setIdLocation={setIdLocation}
             handleEmptyInput={() => setInputError(true)}
@@ -63,9 +63,11 @@ function App() {
             <ErrorCard />
           ) : (
             <main>
-              <div className="location">
+              <div className="container_loc">
                 <h2>Location</h2>
-                <Locationinfo location={location} />
+                <div className="location">
+                  <Locationinfo location={location} />
+                </div>
               </div>
               <div className="residents_text">
                 <h2 className="residents_h2">Residents</h2>

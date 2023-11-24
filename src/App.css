@@ -17,38 +17,68 @@
   height: 75%;
 }
 .header_app .header_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 75%;
   border-radius: 10px;
 
-  background-image: url(https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/QQWVSJ6MDVGKRELX455KIABEEY.gif);
-  height: 200px;
-  background-position: 45% 33%;
+  background-image: linear-gradient(
+      rgba(37, 46, 70, 0.384),
+      rgba(25, 32, 49, 0.192)
+    ),
+    url(https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/QQWVSJ6MDVGKRELX455KIABEEY.gif);
+
+  height: 180px;
+  background-position: 45% 35%;
+}
+.title_app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background-color: transparent !important;
 }
 .header_app h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 900;
   margin-bottom: 1rem;
 
   text-align: center;
 
   font-family: 'Pangolin', sans-serif;
 
-  background-color: rgb(36, 37, 37);
+  background-color: transparent;
+  color: #000;
+  border-radius: 25px;
 }
-
+.container_form {
+  margin: 5px 0px 0px 0px;
+}
+.container_loc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container_loc h2 {
+  font-size: 2rem;
+  margin: 10px 0px 10px 0px;
+}
 .location {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   width: 100vw;
   height: 100%;
 
   border-radius: 10px;
-  background-color: rgb(109, 119, 119);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
+
 .location h2 {
   font-size: 2rem;
   margin: 1rem;
@@ -57,16 +87,19 @@
 .formsearch {
   display: flex;
   justify-content: stretch;
-  align-items: stretch;
+  align-items: center;
   flex-direction: column;
 }
 .formsearch input {
+  text-align: center;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  width: 90%;
 }
 .formsearch button {
   border-radius: 10px;
   font-size: 1.5rem;
+  width: 90%;
 }
 
 /* Error cards */
@@ -124,7 +157,7 @@
 
   border-radius: 10px;
   background-image: linear-gradient(
-      rgba(47, 64, 112, 0.384),
+      rgba(11, 15, 24, 0.575),
       rgba(44, 40, 15, 0.411)
     ),
     url(./assets/blob-scene-haikei2.png);
@@ -161,11 +194,7 @@
 .Card ul li span {
   font-size: 1.5rem;
 }
-/* Resident h2 */
-.residents_h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+
 /* Resident Card*/
 .resident-container {
   display: flex;
@@ -178,10 +207,15 @@
 }
 .residents_text {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 
-  background-color: transparent;
+  background-color: transparent !important;
+}
+/* Resident h2 */
+.residents_h2 {
+  font-size: 2rem;
+  margin: 20px 0px 20px 0px;
 }
 .containet_buttons {
   display: flex;
@@ -346,6 +380,31 @@
   }
   .header_app {
     width: 90vw;
+  }
+  .header_app .header_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+
+    background-image: linear-gradient(
+        rgba(37, 46, 70, 0.384),
+        rgba(25, 32, 49, 0.192)
+      ),
+      url(https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/QQWVSJ6MDVGKRELX455KIABEEY.gif);
+
+    height: 200px;
+    background-position: 45% 32%;
+  }
+  .title_app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 70%;
+    background-color: transparent !important;
   }
   .formsearch input {
     color: #f7f5f8;

@@ -9,7 +9,11 @@ body {
   margin: 0;
   padding: 0;
 
-  background-image: linear-gradient(rgba(5, 7, 12, 0.384), rgba(5, 7, 12, 0.192)), url(https://i.gifer.com/Yp1I.gif);
+  background-image: linear-gradient(
+      rgba(5, 7, 12, 0.384),
+      rgba(5, 7, 12, 0.192)
+    ),
+    url(https://i.gifer.com/Yp1I.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
