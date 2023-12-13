@@ -1,110 +1,33 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import useFetch from './hooks/useFetch'
-import getRandomNumber from './utils/getRandomNumber'
-import Locationinfo from './components/LocationInfo'
-import ResidentCard from './components/ResidentCard'
-import FormSearch from './components/FormSearch'
-import ErrorCard from './components/ErrorCard'
+
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import CharPage from './pages/CharPage'
+import EpisodePage from './pages/EpisodePage'
+import LocationPage from './pages/LocationPage'
+import NavBar from './components/Shared/NavBar'
 
 function App() {
-  const randomId = getRandomNumber(126)
-  const [idLocation, setIdLocation] = useState(randomId)
-  const [inputError, setInputError] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [cardsPerPage] = useState(4)
-  const [residents, setResidents] = useState([])
 
-  const totalPages = Math.ceil(residents.length / cardsPerPage)
-
-  const url = `https://rickandmortyapi.com/api/location/${idLocation}`
-
-  const [location, getApiLocation, hasError] = useFetch(url)
-
-  useEffect(() => {
-    if (idLocation) {
-      getApiLocation()
-      setInputError(false)
-    } else {
-      setInputError(true)
-    }
-  }, [idLocation])
-
-  useEffect(() => {
-    if (location && location.residents) {
-      setResidents(location.residents)
-    }
-  }, [location])
-
-  const nextPage = () => setCurrentPage((prev) => prev + 1)
-  const prevPage = () => setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))
-
-  const currentCards = residents.slice(
-    (currentPage - 1) * cardsPerPage,
-    currentPage * cardsPerPage
-  )
 
   return (
     <div className="App">
-      <header className="header_app">
-        <div className="header_img">
-          <img className="title_app" src="./assets/title.png" alt="RickAndMorty" />
-        </div>
-      </header>
-      <main>
-        <div className='container_form'>
-          <FormSearch
-            setIdLocation={setIdLocation}
-            handleEmptyInput={() => setInputError(true)}
-          />
-          {inputError ? (
-            <ErrorCard />
-          ) : hasError ? (
-            <ErrorCard />
-          ) : (
-            <main>
-              <div className="container_loc">
-                <h2>Location</h2>
-                <div className="location">
-                  <Locationinfo location={location} />
-                </div>
-              </div>
-              <div className="residents_text">
-                <h2 className="residents_h2">Residents</h2>
-              </div>
-              {/** Buttons */}
-              <div className="containet_buttons">
-                {residents.length > cardsPerPage && (
-                  <div className="residents_buttons">
-                    <button onClick={prevPage} disabled={currentPage === 1}>
-                      Previous
-                    </button>
-                    <button
-                      onClick={nextPage}
-                      disabled={residents.length <= currentPage * cardsPerPage}
-                    >
-                      Next
-                    </button>
-                  </div>
-                )}
-                <div className="num_pages">
-                  {totalPages > 1 && (
-                    <div>
-                      Page {currentPage} of {totalPages}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="resident-container">
-                {currentCards.map((url) => (
-                  <ResidentCard url={url} key={url} />
-                ))}
-              </div>
-            </main>
-          )}
-        </div>
-      </main>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/char" element={<CharPage />} />
+        <Route path="/episode" element={<EpisodePage />} />
+        <Route path="/location" element={<LocationPage />} />
+        <Route
+          path="*"
+          element={
+            <h1>
+              404 - Page not found
+              <h1 />
+            </h1>
+          }
+        />
+      </Routes>
     </div>
   )
 }

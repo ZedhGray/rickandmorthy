@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ovni Low poly
+* source:	https://sketchfab.com/3d-models/ovni-low-poly-762d1f656070441794a94ecad84ed743
+* author:	Doriguen (https://sketchfab.com/Doriguen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ovni Low poly" (https://sketchfab.com/3d-models/ovni-low-poly-762d1f656070441794a94ecad84ed743) by Doriguen (https://sketchfab.com/Doriguen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

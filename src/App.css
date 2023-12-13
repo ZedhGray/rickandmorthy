@@ -1,19 +1,25 @@
-.App {
+.spaceheader {
+  height: 8vh;
+}
+/*Home*/
+.Home {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  color: white;
-  background-color: rgba(10, 44, 34, 0.897);
 }
-.header_app {
+.cointainer_3D {
+  width: 80vw;
+  height: 60vh;
+
+  background-color: #272121;
+}
+.header_location {
   display: block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  width: 100vw;
   height: 75%;
 }
 .header_app .header_img {
